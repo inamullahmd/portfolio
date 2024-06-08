@@ -1,6 +1,7 @@
 import { ArticleLayout } from "@/components/ArticleLayout";
+import { type Article } from "@/lib/articles";
 
-export const article = {
+export const article: Article = {
   author: 'Inamullah Mohammad',
   date: '2024-05-06',
   title: 'Estimation of obesity levels based on eating habits and physical condition',

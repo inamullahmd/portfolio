@@ -1,6 +1,7 @@
 import { ArticleLayout } from "@/components/ArticleLayout";
-import HighlightCode from "@/components/Highlighter";
-const article = {
+import { type Article } from "@/lib/articles";
+
+const article: Article = {
     author: 'Inamullah Mohammad',
     date: '2024-05-13',
     title: 'Enhanced indexing strategies for SQLite: Implementation and Evaluation',
@@ -15,7 +16,7 @@ export default function EnhancedIndexingStrategies() {
       <ArticleLayout article={article}>
         <div>
           <p>
-          In our new project, we integrate <code>GIN</code> and <code>BRIN</code> indexing techniques into SQLite to enhance query performance for large datasets. This implementation aims to augment SQLite's indexing capabilities, catering to diverse application requirements demanding robust solutions. By seamlessly integrating these novel techniques as loadable extensions, we strive to significantly advance SQLite's capabilities, improving responsiveness and efficiency in handling various data types and scalability.
+          In our new project, we integrate <code>GIN</code> and <code>BRIN</code> indexing techniques into SQLite to enhance query performance for large datasets. This implementation aims to augment SQLite&lsquo;s indexing capabilities, catering to diverse application requirements demanding robust solutions. By seamlessly integrating these novel techniques as loadable extensions, we strive to significantly advance SQLite&lsquo;s capabilities, improving responsiveness and efficiency in handling various data types and scalability.
           </p>
           {/* <pre style={{ whiteSpace: 'pre-wrap' }}>
             <code>
@@ -39,13 +40,13 @@ export default function EnhancedIndexingStrategies() {
             </code>
           </pre> */}
           <p>
-          In SQLite, the architecture involves the <code>SQLite C API</code> at the interface level, supported by a detailed tokenizer and parser for SQL statements. The proposed architecture integrates GIN and BRIN indexes seamlessly as loadable extensions, enhancing SQLite's indexing capabilities.
+          In SQLite, the architecture involves the <code>SQLite C API</code> at the interface level, supported by a detailed tokenizer and parser for SQL statements. The proposed architecture integrates GIN and BRIN indexes seamlessly as loadable extensions, enhancing SQLite&lsquo;s indexing capabilities.
           </p>
           <p>
           To create and use loadable extensions in SQLite, we need to follow these steps:
           <ol className="space-y-0">
           <li className="m-0">Develop the extension code implementing the desired functionality, following the SQLite extension framework. </li>
-          <li>Compile the code into a shared library (e.g., ".so" on Unix-like systems, DLL on Windows).</li>
+          <li>Compile the code into a shared library (e.g., &quot;.so&quot; on Unix-like systems, DLL on Windows).</li>
           <li>Use the <code>sqlite3_load_extension()</code> function or the <code>.load</code> command in the SQLite shell to load the compiled extension.</li>
           <li>Once loaded, you can use the extended functionality in your SQLite environment.</li>
           </ol>
@@ -113,7 +114,7 @@ export default function EnhancedIndexingStrategies() {
               </tbody>
               </table>
             </table>
-            <p>In conclusion, the Generalized Inverted Index (GIN) in SQLite presents significant limitations due to its high overhead in index creation and maintenance, making it less suitable for SQLite's typical lightweight and rapid data access applications. On the other hand, the Block Range Index (BRIN) shows potential for improving query performance on large datasets, but its effectiveness relies heavily on data being naturally ordered or clustered, which may not always be the case.</p>
+            <p>In conclusion, the Generalized Inverted Index (GIN) in SQLite presents significant limitations due to its high overhead in index creation and maintenance, making it less suitable for SQLite&lsquo;s typical lightweight and rapid data access applications. On the other hand, the Block Range Index (BRIN) shows potential for improving query performance on large datasets, but its effectiveness relies heavily on data being naturally ordered or clustered, which may not always be the case.</p>
         </div>
       </ArticleLayout>
     )

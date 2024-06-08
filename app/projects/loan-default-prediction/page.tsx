@@ -1,9 +1,8 @@
 
 import { ArticleLayout } from "@/components/ArticleLayout";
-import plot from '@/images/plots/loan-default-class-imbalance.png';
-import Image from "next/image";
+import { type Article } from "@/lib/articles";
 
-export const article = {
+export const article: Article = {
   author: 'Inamullah Mohammad',
   date: '2023-05-12',
   title: 'Predicting Possible Loan Default Using Machine Learning',
@@ -18,7 +17,7 @@ export default function LoanDefaultPrediction() {
       <div>
         <p>In this project, we tackle the critical issue of predicting loan defaults using supervised learning algorithms. Loan default poses significant risks to financial institutions, leading to financial losses and other negative impacts. To mitigate these risks, we explore the effectiveness of <code>decision trees</code>, <code>random forests</code>, <code>logistic regression</code>, and <code>KNN</code> in predicting loan defaults. We utilize a dataset from Kaggle and implement these algorithms in <code>Python</code> without external libraries.</p>
         <p>The dataset contains general attributes of individuals, such as income, age, marital status, and others, with a total of 252k examples, of which 12.3% are labeled as defaulters. We preprocess the data by handling categorical variables, ensuring no missing or invalid data, and standardizing features. To address the imbalance in the dataset, we use the <code>RandomOverSampler</code> method and sample 10k records using <code>stratified sampling</code> for computational efficiency.</p>
-        <Image src={plot} alt="Description of your image" />
+        <img src="../images/plots/loan-default-class-imbalance.png" alt="Description of your image" />
         <p><code>Logistic regression</code>, a statistical method for analyzing datasets with one or more independent variables, is implemented using gradient descent to estimate parameters. <code>Decision trees</code> are used to recursively split data based on attributes, and we use the information gain criterion for splitting nodes. <code>KNN</code>, a non-parametric ML algorithm, finds the K nearest neighbors to a new data point to predict its class. <code>Random forests</code>, an ensemble method, aggregate results from multiple decision trees to reduce overfitting and improve accuracy.</p>
         <p>Our evaluation focuses on metrics such as <code>ROC AUC score</code>, <code>F1 score</code>, and <code>prediction time</code>. We hypothesize that tree-based models will outperform linear models due to their ability to capture non-linear relationships. We find that <code>Random Forest</code> performs best among the models, achieving higher <code>ROC AUC</code> and <code>F1</code> scores. However, <code>KNN</code> operates slower than other models due to its higher prediction time complexity.</p>
         
